@@ -103,7 +103,7 @@ const createNew = asyncHandler(async (req, res) => {
       last_name: req.body.lastname,
       phone_number: req.body.phoneNo,
       tx_ref: share._id,
-      callback_url: "https://share-back-end.onrender.com/api/transaction",
+      callback_url: "https://share-back-end.onrender.com/api/transaction/",
       return_url: "http://localhost:3000",
       "customization[title]": "Payment for buying a share",
       "customization[description]": "I love online payments",
