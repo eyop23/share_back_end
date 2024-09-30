@@ -1,25 +1,32 @@
-const mongoose=require('mongoose');
-const schema=mongoose.Schema;
-const action=new schema({
+const mongoose = require("mongoose");
+const schema = mongoose.Schema;
+const action = new schema(
+  {
     first_name: {
-        type:String,
-        required:[true, 'please add firstname']
+      type: String,
+      required: [true, "please add firstname"],
     },
     last_name: {
-        type:String,
-        required:[true, 'please add lastname']
+      type: String,
+      required: [true, "please add lastname"],
     },
     email: {
-        type:String,
-        required:[true, 'please add email']
-    }, 
+      type: String,
+      required: [true, "please add email"],
+    },
     currency: {
-        type:String,
-        required:[true, 'please add']
-    }, 
+      type: String,
+      required: [true, "please add"],
+    },
     amount: {
-        type:Number,
-        required:[true, 'please add author']
+      type: Number,
+      required: [true, "please add author"],
+    },
+    status: {
+      type: String,
+    },
+    tx_ref: {
+      type: String,
     },
     // charge:{
     //     type:Number,
@@ -29,9 +36,10 @@ const action=new schema({
     //     type:String,
     //     required:[true, 'please add']
     // }
-},
-{
-    timestamps:true,
-})
-const transaction=mongoose.model('Transaction',action);
-module.exports=transaction;
+  },
+  {
+    timestamps: true,
+  }
+);
+const transaction = mongoose.model("Transaction", action);
+module.exports = transaction;

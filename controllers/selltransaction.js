@@ -24,6 +24,8 @@ const postNewtransaction = asyncHandler(async (req, res) => {
       email: result.data.email,
       currency: result.data.currency,
       amount: result.data.amount,
+      tx_ref: result.data.tx_ref,
+      status: result.status,
     });
     payment
       .save()
