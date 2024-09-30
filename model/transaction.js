@@ -28,14 +28,6 @@ const action = new schema(
     tx_ref: {
       type: String,
     },
-    // charge:{
-    //     type:Number,
-    //     required:[true, 'please add']
-    // },
-    // title:{
-    //     type:String,
-    //     required:[true, 'please add']
-    // }
   },
   {
     timestamps: true,

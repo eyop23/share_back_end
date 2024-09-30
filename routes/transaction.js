@@ -8,7 +8,8 @@ const { protect } = require("../middleware/authMiddelware");
 
 const router = express.Router();
 
-router.get("/", posttransaction);
+// router.get("/", posttransaction);
+router.post("/", posttransaction);
 router.get("/:email", protect, getTransaction);
 
 module.exports = router;
