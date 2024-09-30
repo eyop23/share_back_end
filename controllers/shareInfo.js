@@ -81,7 +81,10 @@ const approveUser = asyncHandler(async (req, res) => {
       res.json({
         message: "saved",
       });
-      await sendEmail(share.email, "you have successfully registerd");
+      await sendEmail(
+        share.email,
+        `Dear ${req.body.firstname} ,you have successfully registerd, please login and see your shareholder status`
+      );
     })
     .catch((error) => {
       res.json({
