@@ -77,10 +77,10 @@ let options = {
     "last_name": req.body.lastname,
     "phone_number": req.body.phoneNo,
     "tx_ref": share._id,
-    "callback_url": "http://localhost:8000/api/transaction",
-    "return_url": "http://localhost:3000",
+    "callback_url": "https://share-back-end.onrender.com/api/transaction",
+    "return_url": "http://localhost:3000",// later this will be changed
     "customization[title]": "Payment for buying a share",
-    "customization[description]": "I love online payments"
+    // "customization[description]": "I love online payments"
   })
 };
 request(options, async function (err, response) {
