@@ -1,5 +1,4 @@
 const express = require("express");
-// const { isAdmin, protect } = require('../middleware/authMiddelware');
 const {
   posttransaction,
   getTransaction,
