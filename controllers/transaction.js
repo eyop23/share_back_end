@@ -6,6 +6,12 @@ const posttransaction = asyncHandler(async (req, res) => {
   let value = req.params.id;
   console.log("trasn id>>>>>>>>>>>>>>>>>>>>>>>"); //chapa unique value to verify the payement
   console.log(value);
+
+  if (!value) {
+    return res.status(400).json({
+      message: "Transaction ID is missing",
+    });
+  }
   let options = {
     method: "GET",
     url: `https://api.chapa.co/v1/transaction/verify/${value}`,
