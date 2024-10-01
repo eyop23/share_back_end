@@ -1,10 +1,16 @@
 const express = require("express");
+const cloudinary = require("cloudinary").v2; // Import Cloudinary
 // MONGO_URL= "mongodb://localhost:27017/share"
 require("dotenv").config();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const { errorHandler } = require("./middleware/errorMiddleware");
 const app = express();
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 const port = process.env.PORT || 5000;
 const cors = require("cors");
 // mongoose.Promise=global.Promise;
