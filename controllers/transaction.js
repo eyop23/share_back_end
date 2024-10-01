@@ -58,7 +58,9 @@ const posttransaction = asyncHandler(async (req, res) => {
 });
 const getTransaction = asyncHandler(async (req, res) => {
   const { email } = req.params;
+  console.log("??????????/");
   const transactionhistory = await transaction.findOne({ email });
+  console.log(transactionhistory);
   if (!transactionhistory) {
     res.status(404);
     throw new Error("'no transaction occured with this email'");
