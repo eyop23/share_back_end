@@ -8,7 +8,7 @@ const { protect, isAdmin } = require("../middleware/authMiddelware");
 
 const router = express.Router();
 
-router.get("/", posttransaction);
+router.get("/:id", posttransaction);
 // router.post("/", protect, isAdmin, posttransaction);
 router.get("/:email", protect, getTransaction);
 

@@ -3,7 +3,7 @@ const { default: mongoose } = require("mongoose");
 const request = require("request");
 const transaction = require("../model/transaction");
 const posttransaction = asyncHandler(async (req, res) => {
-  const value = req.query.trx_ref;
+  let value = req.params.id;
   console.log("trasn id>>>>>>>>>>>>>>>>>>>>>>>"); //chapa unique value to verify the payement
   console.log(value);
   let options = {
