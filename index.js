@@ -14,6 +14,21 @@ cloudinary.config({
 const port = process.env.PORT || 5000;
 const cors = require("cors");
 // mongoose.Promise=global.Promise;
+app.get("/", (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Home Page</title>
+      </head>
+      <body>
+        <h1>Welcome to the Home Page!</h1>
+        <p>This is a simple HTML response.</p>
+      </body>
+    </html>
+  `);
+});
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/uploads", express.static("uploads"));
