@@ -9,6 +9,6 @@ const router = express.Router();
 
 router.get("/:id", posttransaction);
 // router.post("/", protect, isAdmin, posttransaction);
-router.get("/:email", protect, getTransaction);
+router.get("/with_email/:email", protect, getTransaction);
 
 module.exports = router;
