@@ -39,7 +39,7 @@ const increaseShare = asyncHandler(async (req, res) => {
       last_name: req.body.lastname,
       phone_number: req.body.phoneNo,
       tx_ref: share._id,
-      callback_url: "https://share-back-end.onrender.com/api/selltransaction",
+      callback_url: `https://share-back-end.onrender.com/api/selltransaction/${share._id}`,
       return_url: "http://localhost:3000/shareholder/dashboard",
       "customization[title]": "Payment for my favourite merchant",
       "customization[description]": "I love online payments",
