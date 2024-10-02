@@ -16,17 +16,29 @@ const cors = require("cors");
 // mongoose.Promise=global.Promise;
 app.get("/", (req, res) => {
   res.send(`
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>Home Page</title>
-      </head>
-      <body>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Home Page</title>
+      <style>
+        body {
+          display: flex;                /* Use Flexbox for centering */
+          justify-content: center;      /* Center horizontally */
+          align-items: center;          /* Center vertically */
+          height: 100vh;               /* Full viewport height */
+          margin: 0;                   /* Remove default margin */
+          text-align: center;           /* Center text */
+        }
+      </style>
+    </head>
+    <body>
+      <div>
         <h1>Welcome to the Home Page!</h1>
         <p>This is a simple HTML response.</p>
-      </body>
-    </html>
-  `);
+      </div>
+    </body>
+  </html>
+`);
 });
 
 app.use(cors());

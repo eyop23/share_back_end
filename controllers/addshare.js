@@ -40,6 +40,7 @@ const increaseShare = asyncHandler(async (req, res) => {
       phone_number: req.body.phoneNo,
       tx_ref: share._id,
       callback_url: `https://share-back-end.onrender.com/api/selltransaction/${share._id}`,
+      // return_url: "http://localhost:3000/shareholder/dashboard",
       return_url:
         "https://share-mangement-sym.vercel.app/shareholder/dashboard",
       "customization[title]": "Payment for my favourite merchant",
