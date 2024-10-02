@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
   <!DOCTYPE html>
   <html>
     <head>
+      <title>Home Page</title>
       <style>
         body {
           display: flex;                /* Use Flexbox for centering */
